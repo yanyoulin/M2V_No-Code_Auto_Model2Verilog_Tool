@@ -1,0 +1,66 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+  **** SW Build 5238294 on Nov  8 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Jun  6 10:59:38 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis/2024.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'rianne' on host 'LAPTOP-PT3593SA.localdomain' (Linux_x86_64 version 6.6.87.1-microsoft-standard-WSL2) on Fri Jun 06 10:59:42 CST 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250606_105923'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-1510] Running: open_project my_mlp_project 
+INFO: [HLS 200-10] Creating and opening project '/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250606_105923/my_mlp_project'.
+INFO: [HLS 200-1510] Running: set_top mlp_inference 
+INFO: [HLS 200-1510] Running: add_files dense.h 
+INFO: [HLS 200-10] Adding design file 'dense.h' to the project
+INFO: [HLS 200-1510] Running: add_files gelu.h 
+INFO: [HLS 200-10] Adding design file 'gelu.h' to the project
+INFO: [HLS 200-1510] Running: add_files relu.h 
+INFO: [HLS 200-10] Adding design file 'relu.h' to the project
+INFO: [HLS 200-1510] Running: add_files top.h 
+INFO: [HLS 200-10] Adding design file 'top.h' to the project
+INFO: [HLS 200-1510] Running: add_files softmax.h 
+INFO: [HLS 200-10] Adding design file 'softmax.h' to the project
+INFO: [HLS 200-1510] Running: add_files top.cpp 
+INFO: [HLS 200-10] Adding design file 'top.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files weights.h 
+INFO: [HLS 200-10] Adding design file 'weights.h' to the project
+INFO: [HLS 200-1510] Running: add_files config.h 
+INFO: [HLS 200-10] Adding design file 'config.h' to the project
+INFO: [HLS 200-1510] Running: add_files common.h 
+INFO: [HLS 200-10] Adding design file 'common.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250606_105923/my_mlp_project/solution1'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../test.cpp in debug mode
+   Compiling ../../../../top.cpp in debug mode
+   Generating csim.exe
+Failed to open input file: example_input.txt
+@E Simulation failed: Function 'main' returns nonzero value '1'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:03:10; Allocated memory: 0.109 MB.
+4
+    while executing
+"source build_prj.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 181.82 seconds. Total CPU system time: 7.91 seconds. Total elapsed time: 197.85 seconds; peak allocated memory: 209.973 MB.

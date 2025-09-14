@@ -1,0 +1,1 @@
+[["Dense", "dense1"], ["Activation", "relu1"], ["Dense", "dense2"], ["Activation", "softmax"]]

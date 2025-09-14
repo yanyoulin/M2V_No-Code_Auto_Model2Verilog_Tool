@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>M2V No-Code Auto Model2Verilog Tool</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #dddddd;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      color: #dddddd;
+      font-size: 28px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    main, section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    input, select, button {
+      margin-top: 10px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #666;
+    }
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .grid-3box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+    }
+    .panel {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .model-graph-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .vertical-graph {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 2px;
+    }
+    .layer-box {
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-align: center;
+      min-width: 100px;
+      color: #fff;
+      background-color: #555;
+    }
+    .arrow-down {
+      font-size: 24px;
+      color: #888;
+      margin-left: 40px;
+    }
+    .option-set {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .option-set button {
+      flex: 1;
+    }
+    pre {
+      background-color: #111;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      border: 1px solid #333;
+    }
+    ul {
+      padding-left: 1rem;
+    }
+    ul li a {
+      color: #dddddd;
+      text-decoration: underline;
+    }
+    .hls-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>M2V No-Code Auto Model2Verilog Tool</header>
+
+<main class="grid-2col">
+  <div class="panel">
+    <h2>Model Options</h2>
+    <form id="upload-form" enctype="multipart/form-data">
+      <input type="file" name="model" accept=".h5" onchange="autoUpload(this)">
+    </form>
+    <div class="option-set">
+      <button onclick="useExampleModel()">Use Example MNIST MLP Model</button>
+    </div>
+    <pre id="example-info" style="margin-top: 15px; display: none;"></pre>
+    <select id="folder-selector" onchange="onSelectFolder(this.value)">
+      <option value="">-- Select Previous Session --</option>
+    </select>
+  </div>
+
+  <div class="panel">
+    <h2>Model Architecture</h2>
+    <div id="model-graph" class="vertical-graph" style="align-items: flex-start;">Upload or use example model to view structure...</div>
+  </div>
+</main>
+
+<main class="grid-2col">
+  <div class="panel">
+    <h2>HLS Parameters</h2>
+    <form id="hls-params" class="hls-grid-2col"></form>
+    <button onclick="submitHLS()">Apply & Modify config.h</button>
+  </div>
+  <div class="panel">
+    <h2>config.h Preview</h2>
+    <pre id="top-preview">No content yet.</pre>
+  </div>
+</main>
+
+<main class="grid-2col preview">
+  <div class="panel">
+    <h2>View Generated Code Directory</h2>
+    <button onclick="fetchFolder()">Show Folder Contents</button>
+    <div id="folder-list"></div>
+    <button onclick="runBuild()">Run Vitis HLS</button>
+    <button onclick="runVivado()">Run Vivado</button>
+  </div>
+  <div class="panel">
+    <h2>File Preview</h2>
+    <pre id="file-preview">Select a file to view its contents.</pre>
+  </div>
+</main>
+
+<main class="grid-3box">
+  <div class="panel" style="grid-column: 1 / 2; grid-row: 1 / 3;">
+    <h2>
+      Build Log
+      <button onclick="toggleLog()" style="float:right;">Toggle</button>
+    </h2>
+    <pre id="build-log" style="max-height: 500px; overflow-y: auto;">Waiting for Vitis or Vivado execution...</pre>
+  </div>
+
+
+  <div class="panel" style="grid-column: 2 / 3; grid-row: 1 / 2;">
+    <h2>Vitis HLS Reports</h2>
+    <button onclick="loadRpt('csynth')">View csynth.rpt</button>
+    <button onclick="loadRpt('csynth_size')">View csynth_design_size.rpt</button>
+    <pre id="vitis-report">Select a report above to display.</pre>
+  </div>
+
+  <div class="panel" style="grid-column: 2 / 3; grid-row: 2 / 3;">
+    <h2>Vivado Reports</h2>
+    <button onclick="loadRpt('utilization')">View utilization_1.rpt</button>
+    <button onclick="loadRpt('synth')">View synth_1.rpt</button>
+    <pre id="vivado-report">Select a report above to display.</pre>
+  </div>
+</main>
+
+<main>
+  <div class="panel">
+    <h2>Compare Keras vs HLS Model Outputs</h2>
+    <button onclick="runCompare()">Compare Outputs</button>
+    <pre id="compare-result">No output yet.</pre>
+  </div>
+</main>
+
+<script>
+  async function submitUpload() {
+    const form = document.getElementById("upload-form");
+    const formData = new FormData(form);
+    alert("Running read_model.py...");
+    const response = await fetch("/upload_model", { method: "POST", body: formData });
+    if (response.ok) {
+      alert("Upload and parse successful.");
+      await reloadUI();
+    }
+  }
+
+  async function useExampleModel() {
+    alert("Running train_test.py for example model...");
+    const response = await fetch("/upload_model", {
+      method: "POST",
+      body: new FormData(),
+      headers: { 'X-Use-Example': 'true' }
+    });
+    if (response.ok) {
+      alert("Example model ready.");
+      document.getElementById("example-info").style.display = "block";
+      document.getElementById("example-info").innerText = `Example MNIST MLP Model:\n\nmodel = tf.keras.Sequential([\n  tf.keras.layers.Input(shape=(784,), name='input'),\n  tf.keras.layers.Dense(32, activation='linear', name='dense1'),\n  tf.keras.layers.Activation('relu', name='relu1'),\n  tf.keras.layers.Dense(10, activation='linear', name='dense2'),\n  tf.keras.layers.Activation('softmax', name='softmax')\n])`;
+      await reloadUI();
+    }
+  }
+
+  async function loadFolderList() {
+    const res = await fetch("/list_all_folders");
+    const data = await res.json();
+    const selector = document.getElementById("folder-selector");
+    data.folders.reverse().forEach(f => {
+      const opt = document.createElement("option");
+      opt.value = f;
+      opt.textContent = f;
+      selector.appendChild(opt);
+    });
+  }
+
+  // 選擇後重新讀取該資料夾的內容
+  async function onSelectFolder(folder) {
+    if (!folder) return;
+    await fetch(`/set_timestamp?ts=${folder}`);
+    await reloadUI();
+    await loadBuildPrj();
+    alert(`Switched to session: ${folder}`);
+  }
+
+  // 載入頁面時自動抓資料夾列表
+  window.onload = loadFolderList;
+
+
+  async function reloadUI() {
+    const res = await fetch("/get_arch");
+    const result = await res.json();
+    const layers = result.layers || [];
+
+    const graph = document.getElementById("model-graph");
+    const hlsForm = document.getElementById("hls-params");
+    graph.innerHTML = "";
+    hlsForm.innerHTML = ""; // 加入這行清空 HLS 表單
+    let denseCount = 0;
+
+    layers.forEach((layer, index) => {
+      const [type, name] = layer;
+
+      // 顯示結構圖
+      const box = document.createElement("div");
+      box.className = `layer-box`;
+      box.innerHTML = `<strong>${type}</strong><br>${name}`;
+      graph.appendChild(box);
+      if (index < layers.length - 1) {
+        const arrow = document.createElement("div");
+        arrow.className = "arrow-down";
+        arrow.innerHTML = "↓";
+        graph.appendChild(arrow);
+      }
+
+      // 產生 HLS 參數（僅對 Dense 層）
+      if (type === "Dense") {
+        const container = document.createElement("div");
+        container.innerHTML = `
+          <fieldset style="margin-top:1em;padding:10px;border:1px solid #555;">
+            <legend>${name}</legend>
+            <label>Precision</label><br>
+            <input name="precision_${name}" value="ap_fixed<16,6>"><br>
+            <label>Reuse Factor</label><br>
+            <input name="reuse_${name}" type="number" value="1"><br>
+            <label>Pipeline</label><br>
+            <select name="pipeline_${name}">
+              <option>Enabled</option>
+              <option>Disabled</option>
+            </select>
+          </fieldset>
+        `;
+        hlsForm.appendChild(container);
+        denseCount++;
+      }
+    });
+  }
+
+  async function submitHLS() {
+    const form = document.querySelector("#hls-params");
+    const inputs = form.querySelectorAll("input, select");
+    const config = {};
+    inputs.forEach((el) => {
+      const match = el.name.match(/(precision|reuse|pipeline)_(.+)/);
+      if (!match) return;
+      const [, param, name] = match;
+      if (!config[name]) config[name] = {};
+      config[name][param] = param === "reuse" ? parseInt(el.value) : el.value;
+    });
+    await fetch("/submit_hls", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(config),
+    });
+    await loadBuildPrj();
+  }
+
+  async function loadBuildPrj() {
+    const res = await fetch("/preview_config");
+    const text = await res.text();
+    document.getElementById("top-preview").innerText = text;
+  }
+
+  async function runBuild() {
+    await fetch("/run_hls");
+    pollLog("hls");
+  }
+
+  async function runVivado() {
+    await fetch("/run_vivado");
+    pollLog("vivado");
+  }
+
+  async function autoUpload(input) {
+    const form = document.getElementById("upload-form");
+    const formData = new FormData(form);
+    alert("Uploading and processing model...");
+    const response = await fetch("/upload_model", { method: "POST", body: formData });
+    if (response.ok) {
+      alert("Model loaded successfully.");
+      await reloadUI();
+      await reloadHLS();
+    }
+  }
+
+  async function loadRpt(type) {
+    let path = "/view_rpt";
+    if (type === "csynth") path += "?file=csynth";
+    if (type === "csynth_size") path += "?file=csynth_size";
+    if (type === "util") path += "?file=utilization";
+    if (type === "synth") path += "?file=synth";
+    const res = await fetch(path);
+    const text = await res.text();
+    if (type === "csynth" || type === "csynth_size")
+      document.getElementById("vitis-report").innerText = text;
+    if (type === "util" || type === "synth")
+      document.getElementById("vivado-report").innerText = text;
+  }
+
+  async function fetchFolder() {
+    const res = await fetch("/list_generated_code");
+    const data = await res.json();
+    const folder = data.dir;
+    const list = data.files;
+    const container = document.getElementById("folder-list");
+    container.innerHTML = `<ul>${list.map(f => `<li><a href="#" onclick="event.preventDefault(); loadFile('${folder}','${f}')">${f}</a></li>`).join("")}</ul>`;
+  }
+
+  async function loadFile(folder, file) {
+    const res = await fetch(`/view_file?dir=${folder}&file=${encodeURIComponent(file)}`);
+    const content = await res.text();
+    document.getElementById("file-preview").innerText = content;
+  }
+
+  async function runCompare() {
+    const res = await fetch("/run_compare");
+    const data = await res.json();  // 確保是 JSON 物件
+
+    // 表格：Softmax output comparison
+    let table = `<table style="width:100%;text-align:left;"><tr><th>#</th><th>Keras</th><th>HLS</th><th>Δ</th></tr>`;
+    data.softmax.forEach(entry => {
+      table += `<tr><td>${entry.index}</td><td>${entry.keras.toFixed(6)}</td><td>${entry.hls.toFixed(6)}</td><td>${entry.delta.toFixed(6)}</td></tr>`;
+    });
+    table += "</table>";
+
+    // 摘要
+    const summary = `
+      <p><strong>Keras predicted class:</strong> ${data.keras_pred}</p>
+      <p><strong>HLS predicted class:</strong> ${data.hls_pred}</p>
+      <p><strong>Ground Truth Label:</strong> ${data.label}</p>
+      <p><strong>Match status:</strong> ${data.match ? "Match with Keras" : "Mismatch"}</p>
+      <p><strong>Prediction correctness:</strong> ${data.correct ? "HLS correct" : "HLS wrong"}</p>
+    `;
+
+    // 顯示在 HTML 裡
+    document.getElementById("compare-result").innerHTML = table + "<hr>" + summary;
+  }
+
+
+  function pollLog(path) {
+    const logArea = document.getElementById("build-log");
+    logArea.innerText = `Running ${path.includes("hls") ? "HLS" : "Vivado"}...`;
+    const interval = setInterval(async () => {
+      const res = await fetch(`/log_${path}`);
+      const text = await res.text();
+      logArea.innerText = text;
+      if (text.includes("co-simulation finished") || text.includes("Finished Command export_design")) {
+        clearInterval(interval);
+        drawChart();
+        const util = await fetch("/get_utilization");
+        const utilText = await util.text();
+        const status = await fetch("/check_status").then(r => r.json());
+        alert(`${path.toUpperCase()} finished!\n\n` + utilText + `\n\nHLS: ${status.hls ? "V" : "X"}, Vivado: ${status.vivado ? "V" : "X"}`);
+      }
+    }, 2000);
+  }
+
+  function drawChart() {
+    const log = document.getElementById("build-log").innerText;
+    const latencyMatch = log.match(/Latency.*?min = (\d+).*?max = (\d+).*?avg = (\d+)/s);
+    const iiMatch = log.match(/Interval.*?= (\d+)/);
+    const latency = latencyMatch ? latencyMatch.slice(1, 4).map(Number) : [0, 0, 0];
+    const ii = iiMatch ? parseInt(iiMatch[1]) : 0;
+    const ctx = document.getElementById("hls-chart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Latency Min", "Latency Max", "Latency Avg", "II"],
+        datasets: [{ label: "Performance Metrics", backgroundColor: "#00e6e6", data: [...latency, ii] }]
+      },
+      options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+    });
+  }
+
+  function toggleLog() {
+    const log = document.getElementById("build-log");
+    if (log.style.display === "none") {
+      log.style.display = "block";
+    } else {
+      log.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,912 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Fri Jun  6 12:49:13 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source vivado_synth.tcl
+# foreach f [glob ./my_mlp_project/solution1/syn/verilog/*.v] {
+#     read_verilog $f
+# }
+read_verilog: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1467.266 ; gain = 0.023 ; free physical = 4766 ; free virtual = 8594
+# synth_design -top mlp_inference
+Command: synth_design -top mlp_inference
+Starting synth_design
+Using part: xcu200-fsgd2104-2-e
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu200'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27577
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1763.129 ; gain = 294.648 ; free physical = 4278 ; free virtual = 8121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_dense_784_32_s' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_dense_784_32_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_7s_22_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7s_22_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_7s_22_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7s_22_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_6s_22_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_6s_22_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_6s_22_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_6s_22_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_8s_23_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8s_23_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_8s_23_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8s_23_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_7ns_23_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7ns_23_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_7ns_23_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7ns_23_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_8s_24_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8s_24_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_8s_24_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8s_24_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_6ns_22_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_6ns_22_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_6ns_22_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_6ns_22_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_7s_23_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7s_23_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_7s_23_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_7s_23_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_8ns_24_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8ns_24_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_8ns_24_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_8ns_24_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_5s_21_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_5s_21_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_5s_21_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_5s_21_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_9s_25_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_9s_25_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_9s_25_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_9s_25_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_9ns_25_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_9ns_25_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_9ns_25_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_9ns_25_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_5ns_21_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_5ns_21_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_5ns_21_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_5ns_21_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mul_16s_10s_26_1_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_10s_26_1_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mul_16s_10s_26_1_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mul_16s_10s_26_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_20_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_20_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_20_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_20_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_20_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_20_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_20_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_20_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_24s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_24s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_24s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_24s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_24s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_24s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_21s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_21s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 21 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_21s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_21s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_21s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_21s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_17s_21_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_17s_21_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_17s_21_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_17s_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_17s_21_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_17s_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_17s_21_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_17s_21_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_18ns_22_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_18ns_22_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_18ns_22_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_18ns_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_18ns_22_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_18ns_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_18ns_22_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_18ns_22_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_16ns_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_16ns_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_16ns_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_16ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_16ns_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_16ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_16ns_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_16ns_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_24s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_24s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_24s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_24s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_24s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_24s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_22_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_22_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 20 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_22_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_22_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_22_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_22_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_21s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_21s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 21 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_21s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_21s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_21s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_21s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_22s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_22s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_22s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_22s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_22s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_22s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_18s_22_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_18s_22_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_18s_22_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_18s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_18s_22_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_18s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_18s_22_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_18s_22_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_19s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_19s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_19s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_19s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_19s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_19s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_19s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_19s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_20s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_20s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 20 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_20s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_20s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_20s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_20s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_20s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_20s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_22s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_22s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_22s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_22s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_22s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_22s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_21_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_21_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_21_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_21_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_21_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_19s_21_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_19s_21_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_23s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_23s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_23s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_23s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_23s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_23s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16s_22_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16s_22_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16s_22_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16s_22_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16s_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16s_22_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16s_22_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_21s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_21s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 21 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_21s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_21s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_21s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_21s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_21s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_24s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_24s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_24s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_24s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_24s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_24s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 20 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_20s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_20s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7ns_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7ns_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7ns_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_24_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_24_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_24_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_24_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_24_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_24_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_22s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_22s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_22s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_22s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_22s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_22s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_22s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_22s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_23s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_23s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_7s_23s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_23s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_7s_23s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_7s_23s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_22s_23_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_22s_23_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_22s_23_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_22s_23_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_22s_23_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_22s_23_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_22s_23_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_23s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_23s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_4ns_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_4ns_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_4ns_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_24_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_24_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_24_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_24_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6s_23s_24_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6s_23s_24_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5ns_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5ns_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5ns_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_23s_24_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_23s_24_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_6ns_23s_24_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_23s_24_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_23s_24_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_6ns_23s_24_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_6ns_23s_24_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5s_23s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_23s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5s_23s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5s_23s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_23s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5s_23s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_23s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_24s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_24s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8s_24s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_24s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_24s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8s_24s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8s_24s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8ns_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8ns_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_8ns_26s_26_4_0_DSP48_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8ns_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8ns_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_8ns_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_8ns_26s_26_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'mlp_inference_mac_muladd_16s_5s_26s_26_4_0' [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_26s_26_4_0.v:54]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5s_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_26s_26_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_5s_26s_26_4_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_5s_26s_26_4_0.v:54]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mlp_inference_mac_muladd_16s_9s_26s_26_4_0_DSP48_0' (0#1) [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_mac_muladd_16s_9s_26s_26_4_0.v:11]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 24 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 25 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 25 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 23 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter din2_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 11 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 25 - type: integer 
+	Parameter dout_WIDTH bound to: 25 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 25 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 5 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 7 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter din2_WIDTH bound to: 26 - type: integer 
+	Parameter dout_WIDTH bound to: 26 - type: integer 
+	Parameter DataWidth bound to: 11 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './mlp_inference_exp_17_7_s_f_x_lsb_table_ROM_AUTO_1R.dat' is read successfully [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_exp_17_7_s_f_x_lsb_table_ROM_AUTO_1R.v:28]
+	Parameter DataWidth bound to: 25 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './mlp_inference_exp_17_7_s_exp_x_msb_2_m_1_table_ROM_AUTO_1R.dat' is read successfully [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_exp_17_7_s_exp_x_msb_2_m_1_table_ROM_AUTO_1R.v:28]
+	Parameter DataWidth bound to: 25 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './mlp_inference_exp_17_7_s_exp_x_msb_1_table_ROM_AUTO_1R.dat' is read successfully [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_exp_17_7_s_exp_x_msb_1_table_ROM_AUTO_1R.v:28]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 25 - type: integer 
+	Parameter din1_WIDTH bound to: 25 - type: integer 
+	Parameter dout_WIDTH bound to: 50 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 25 - type: integer 
+	Parameter din1_WIDTH bound to: 18 - type: integer 
+	Parameter dout_WIDTH bound to: 43 - type: integer 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 30 - type: integer 
+	Parameter din0_WIDTH bound to: 26 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+	Parameter in0_WIDTH bound to: 26 - type: integer 
+	Parameter in1_WIDTH bound to: 16 - type: integer 
+	Parameter out_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element loop[25].divisor_tmp_reg[26] was removed.  [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:57]
+WARNING: [Synth 8-6014] Unused sequential element remd_reg was removed.  [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:146]
+WARNING: [Synth 8-7129] Port reset in module mlp_inference_sdiv_26ns_16s_16_30_1_divider is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module mlp_inference_exp_17_7_s_exp_x_msb_1_table_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module mlp_inference_exp_17_7_s_exp_x_msb_2_m_1_table_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module mlp_inference_exp_17_7_s_f_x_lsb_table_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_7ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_11s_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_8ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_7s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_8s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_6ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_12s_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_5ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_5s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_6s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9s_25ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9ns_25s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_8ns_25ns_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_11s_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9s_25s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9ns_23s_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9ns_22ns_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10s_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10ns_18s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9ns_19s_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10s_16s_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_8s_19ns_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10s_16ns_25_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_10s_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_7ns_16ns_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_15ns_9s_17s_24_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7ns_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5ns_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8ns_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_4ns_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_9s_26s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_9ns_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_10s_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_11s_26ns_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5s_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_23s_24_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_22s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6s_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_22s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6s_23s_24_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5ns_22s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_23s_24_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_22s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_21s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_20s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7ns_18ns_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7ns_21s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_16ns_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7ns_17ns_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_16s_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7ns_20s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_4ns_23s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_4ns_19s_21_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5ns_18ns_21_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_19s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_6ns_18s_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_21s_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_20s_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_8s_16ns_23_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_7s_18ns_22_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5ns_17s_21_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_5ns_24s_26_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module mlp_inference_mac_muladd_16s_4ns_19s_20_4_0_DSP48_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:10:31 ; elapsed = 00:15:41 . Memory (MB): peak = 8585.238 ; gain = 7116.758 ; free physical = 90 ; free virtual = 1245
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:11:41 ; elapsed = 00:19:35 . Memory (MB): peak = 8585.238 ; gain = 7116.758 ; free physical = 94 ; free virtual = 1245
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu200-fsgd2104-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcu200-fsgd2104-2-e
+Finished Loading Part and Timing Information : Time (s): cpu = 00:11:41 ; elapsed = 00:19:35 . Memory (MB): peak = 8593.242 ; gain = 7124.762 ; free physical = 98 ; free virtual = 1243
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[25].remd_tmp_reg[26]' and it is trimmed from '26' to '16' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[25].dividend_tmp_reg[26]' and it is trimmed from '26' to '16' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[24].remd_tmp_reg[25]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[23].remd_tmp_reg[24]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[22].remd_tmp_reg[23]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[21].remd_tmp_reg[22]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[20].remd_tmp_reg[21]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[19].remd_tmp_reg[20]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[18].remd_tmp_reg[19]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[17].remd_tmp_reg[18]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[16].remd_tmp_reg[17]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[15].remd_tmp_reg[16]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[14].remd_tmp_reg[15]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[13].remd_tmp_reg[14]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[12].remd_tmp_reg[13]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[11].remd_tmp_reg[12]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[10].remd_tmp_reg[11]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[9].remd_tmp_reg[10]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[8].remd_tmp_reg[9]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[7].remd_tmp_reg[8]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[6].remd_tmp_reg[7]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[5].remd_tmp_reg[6]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[4].remd_tmp_reg[5]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[3].remd_tmp_reg[4]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[2].remd_tmp_reg[3]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[1].remd_tmp_reg[2]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+WARNING: [Synth 8-3936] Found unconnected internal register 'loop[0].remd_tmp_reg[1]' and it is trimmed from '26' to '25' bits. [/mnt/c/Users/riann/Downloads/小組專題/5.28/M2V-main/generated_code/20250605_210431/my_mlp_project/solution1/syn/verilog/mlp_inference_sdiv_26ns_16s_16_30_1.v:56]
+/tools/Xilinx/Vivado/2024.2/bin/rdiArgs.sh: line 421: 27522 Killed                  "$RDI_PROG" "$@"
+Parent process (pid 27522) has died. This helper process will now exit

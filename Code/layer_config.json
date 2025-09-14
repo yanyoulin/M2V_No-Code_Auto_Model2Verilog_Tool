@@ -1,0 +1,12 @@
+{
+  "dense1": {
+    "precision": "ap_fixed<16,6>",
+    "reuse": 1,
+    "pipeline": "Disabled"
+  },
+  "dense2": {
+    "precision": "ap_fixed<32,6>",
+    "reuse": 3,
+    "pipeline": "Disabled"
+  }
+}
