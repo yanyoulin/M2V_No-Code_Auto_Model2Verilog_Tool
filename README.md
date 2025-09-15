@@ -14,17 +14,17 @@ Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that autom
 <br>
 
 ### Features
-- No-Code Workflow: Users can upload a .h5 model and adjust parameters via GUI without requiring Verilog or HLS knowledge.
-- Automatic Conversion: Backend scripts translate the model into HLS C++ code and execute Vitis HLS flow for synthesis and simulation.
-- Hardware Deployment: Generates Verilog code compatible with FPGA platforms (test on xczu7ev-ffvc1156-2-e and pass).
-- Visualization: Displays model structure, conversion status, and simulation results.
-- Downloadable Package: Provides Verilog code, reports (.rpt), and simulation logs in a compressed package.
-- Model Support: Supports models with common activation functions such as ReLU, GELU, and Softmax.
+- **No-Code Workflow**: Users can upload a .h5 model and adjust parameters via GUI without requiring Verilog or HLS knowledge.
+- **Automatic Conversion**: Backend scripts translate the model into HLS C++ code and execute Vitis HLS flow for synthesis and simulation.
+- **Hardware Deployment**: Generates Verilog code compatible with FPGA platforms (test on xczu7ev-ffvc1156-2-e and pass).
+- **Visualization**: Displays model structure, conversion status, and simulation results.
+- **Downloadable Package**: Provides Verilog code, reports (.rpt), and simulation logs in a compressed package.
+- **Model Support**: Supports models with common activation functions such as ReLU, GELU, and Softmax.
 
 ![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/feature.png) <br>
 
 ### Project Flowchart
-1. Writing Sorce Codes:<br>
+1. Writing Source Codes:<br>
 Source codes include data type definitions, Dense layers, GELU, and ReLU activation. The architecture is implemented using Fixed-Point, fully unrolled, and pipelined execution.<br>
 2. Weights & Config:<br>
 Traverse the entire .h5 file, identify & collect the Kernel and Bias of each layer, and create a network structure list that records the type of each layer (such as Dense layer or Activation layer).<br>
