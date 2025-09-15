@@ -6,9 +6,11 @@ To address this challenge, we conducted research and ultimately developed a tool
 
 ## About Project
 Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that automatically converts trained machine learning models into Verilog code executable on FPGA. By offering a user-friendly interface, our tool enables seamless deployment of AI models to hardware accelerators, reducing the complexity of software–hardware integration.<br>
+
 ### Pre-work
 **HLS4ML study** (learn how other people convert model to Verilog):<br>
 **Vitis HLS study** (learn how this tool can be used to support model-to-hardware conversion):<br>
+
 ### Features
 - No-Code Workflow: Users can upload a .h5 model and adjust parameters via GUI without requiring Verilog or HLS knowledge.
 - Automatic Conversion: Backend scripts translate the model into HLS C++ code and execute Vitis HLS flow for synthesis and simulation.
@@ -18,6 +20,7 @@ Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that autom
 - Model Support: Supports models with common activation functions such as ReLU, GELU, and Softmax.
 <br>
 ![image]() <br>
+
 ### Project Flowchart
 1. Writing Sorce Codes:<br>
 Source codes include data type definitions, Dense layers, GELU, and ReLU activation. The architecture is implemented using Fixed-Point, fully unrolled, and pipelined execution.<br>
@@ -29,6 +32,7 @@ Read config.h, organize an inference process based on the function of each layer
 This script is responsible for automating the construction of a HLS project, covering steps such as project creation, design file integration, clock and target device, inference simulation, hardware synthesis, and C-to-RTL comparison.<br>
 5. Run ALL!!:<br>
 Write a Python script to run the entire process of converting a model into hardware. The script should sequentially complete model training, weight and structure extraction, inference program generation, and High-Level Synthesis (HLS), enabling the entire design workflow to be executed with a single command.<br>
+
 ### System Architecture
 ![image]() <br>
 The project is divided into frontend and backend components:
