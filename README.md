@@ -9,7 +9,9 @@ Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that autom
 
 ### Pre-work
 [**HLS4ML study** (learn how other people convert model to Verilog)](https://www.canva.com/design/DAGiRhgCfTA/e2HczuuPRtxjcC7tW5G0ag/view?utm_content=DAGiRhgCfTA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4d0b821f57)
+<br>
 [**Vitis HLS study** (learn how this tool can be used to support model-to-hardware conversion)](https://github.com/yanyoulin/HLS-study-project)
+<br>
 
 ### Features
 - No-Code Workflow: Users can upload a .h5 model and adjust parameters via GUI without requiring Verilog or HLS knowledge.
