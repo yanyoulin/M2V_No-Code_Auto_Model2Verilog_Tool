@@ -18,7 +18,7 @@ Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that autom
 - Visualization: Displays model structure, conversion status, and simulation results.
 - Downloadable Package: Provides Verilog code, reports (.rpt), and simulation logs in a compressed package.
 - Model Support: Supports models with common activation functions such as ReLU, GELU, and Softmax.
-<br>
+
 ![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/feature.png) <br>
 
 ### Project Flowchart
