@@ -19,7 +19,7 @@ Our project M2V (Model2Verilog) provides a no-code, GUI-driven system that autom
 - Downloadable Package: Provides Verilog code, reports (.rpt), and simulation logs in a compressed package.
 - Model Support: Supports models with common activation functions such as ReLU, GELU, and Softmax.
 <br>
-![image]() <br>
+![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/feature.png) <br>
 
 ### Project Flowchart
 1. Writing Sorce Codes:<br>
@@ -34,7 +34,7 @@ This script is responsible for automating the construction of a HLS project, cov
 Write a Python script to run the entire process of converting a model into hardware. The script should sequentially complete model training, weight and structure extraction, inference program generation, and High-Level Synthesis (HLS), enabling the entire design workflow to be executed with a single command.<br>
 
 ### System Architecture
-![image]() <br>
+![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/Architecture.png) <br>
 The project is divided into frontend and backend components:
 - Frontend
   - Upload .h5 model and set conversion parameters.
@@ -71,7 +71,7 @@ These experiments validate that our system can faithfully reproduce the results 
 [Deme Video]([https://github.com](https://youtu.be/IdfV-gUlPQM))
 
 ## Comparison with HLS4ML
-![image]() <br>
+![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/compare.jpg) <br>
 
 ## Team
 Students: 林彥佑, 曾若恩 <br>
