@@ -68,7 +68,7 @@ These experiments validate that our system can faithfully reproduce the results 
 - Performance Gap: Compared to HLS4ML, our tool requires further improvement in efficiency and resource usage.
 
 ## Demo
-[Deme Video]([https://github.com](https://youtu.be/IdfV-gUlPQM))
+[Demo Video](https://youtu.be/IdfV-gUlPQM)
 
 ## Comparison with HLS4ML
 ![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/compare.jpg) <br>
