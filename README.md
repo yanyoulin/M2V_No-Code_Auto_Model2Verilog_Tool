@@ -75,6 +75,11 @@ These experiments validate that our system can faithfully reproduce the results 
 ## Comparison with HLS4ML
 ![image](https://github.com/yanyoulin/M2V_No-Code_Auto_Model2Verilog_Tool/blob/main/Pictures/compare.jpg) <br>
 
+## Contributors
+This project was jointly developed by two students as part of a capstone research project.  
+Both contributors participated equally in all stages of the work, including system design, implementation, testing, and documentation.  
+The contribution ratio is **50% : 50%**, with no differentiation in responsibility or workload. 
+
 ## Team
 Students: 林彥佑, 曾若恩 <br>
 Advisor: Prof. 陳添福 <br>
